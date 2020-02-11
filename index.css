@@ -1,0 +1,641 @@
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 0;
+  background-color: #e6ecf0;
+
+}
+
+/* !!!!!!!!!!!!!!!!!!! HEADER NAV !!!!!!!!!!!!!!!!! */
+.skip-links{
+  display: none;
+}
+
+.header-NavBar{
+display: flex;
+position: fixed;
+top:0;
+right:0;
+left:0;
+height:46px;
+z-index: 100;
+background-color: white;
+box-shadow: 0 2px 2px -2px rgba(0,0,0,.3);
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  margin-left: 10%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+}
+li,a{
+  display: flex;
+  display: inline;
+  flex: 1;
+  text-decoration: none;
+  color: grey;
+  font-weight: 450;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+.cool-link::after{
+  content: '';
+  display: block;
+  margin-top: 12px;
+  margin-left: 7px;
+  width: 0;
+  height: 2px;
+  background: #4AB3F4;
+  transition: width .3s;
+}
+.cool-link:hover::after{
+  width: 100%;
+  transition: width .3s;
+}
+
+li,a:hover{
+  color:#4AB3F4;
+}
+
+.twitter-tweet-btn{
+  display:flex;
+  flex-direction: column-reverse;
+  width: 50px;
+  margin-right: 125px;
+}
+.twitter-logo{
+  display:flex;
+  flex: 3;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+.icon{
+  width:25px;
+  height:25px;
+}
+
+.twitter-tweet-btn button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 1em;
+  width:80px;
+  color:white;
+  background-color:#4AB3F4;
+  border: 1px solid #4AB3F4;
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.content-Wrapper{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+max-width: 1190px;
+margin: 56px auto;
+grid-column-gap: 10px;
+
+}
+
+/* !!!!!!!!!!!!!!!!!!!NEW SECTION!!!!!!!!!!!!!!!!! */
+
+/* LEFT CONTAINER */
+.content-Left{
+height: 250px;
+width:290px;
+background-color: white;
+border-radius: 0.5em;
+}
+.profile-grid{
+  display: grid;
+  grid-template-columns: 290px;
+  grid-template-rows: 65px 100px 100px;
+}
+.cover-image{
+  position: absolute;
+  width: 290px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.banner{
+  position: absolute;
+  width: 100%;
+  height:95px;
+  object-fit: contain;
+  background-color: black;
+}
+
+.profile-picture{
+  display: grid;
+  background-color: black;
+  background-image: url("images/penguin.png");
+  background-size: contain;
+  width: 80px;
+  height:85px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border-radius: 50%;
+  margin-left: 15px;
+  z-index: 4;
+  border: 3px solid #E6ECF0;
+}
+
+.u-name{
+margin-left: 100px;
+margin-top: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.user-tag{
+  margin-left: 100px;
+  margin-top: -13px;
+  color: grey;
+  font-size: 13.5px;
+}
+.follower-info{
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20px 1fr;
+    margin-left: 25px;
+    font-size: 13px;
+    font-weight: 500;
+    color: grey;
+    margin-top: -7px;
+}
+
+.num-style{
+  font-size: 17px;
+  color:#4AB3F4;
+}
+/* !!!!!!!!!!!!!!!!!!!NEW SECTION!!!!!!!!!!!!!!!!! */
+
+/* CENTER CONTAINER */
+.content-Center{
+  height: 410px;
+  width:610px;
+  background-color: white;
+  border-radius: 0.5em;
+}
+/* GRID FOR ALL TWEETS  */
+.feed-container-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 80px 80px 80px 80px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 15px;
+}
+.tweet-1{
+  border-bottom: 1px solid #E6ECF0;
+}
+/* GRID FOR TWEET 1 */
+.Inside-tweet-1{
+  display: grid;
+  grid-template-columns: 70px 60px 65px 50px 1fr;
+  grid-template-rows: 20px 20px 20px;
+}
+.pen-tweet-1{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.feed-tweet-name-1{
+  grid-column-start:2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: -1px;
+
+}
+.feed-tag-name-1{
+  grid-column-start:3;
+  grid-row-start: 1;
+  color:grey;
+  font-size: 13.5px;
+  margin-top: -1px;
+}
+.feed-date{
+  grid-column-start:4;
+  grid-row-start: 1;
+  color:grey;
+  font-size: 13.5px;
+  margin-top: -1px;
+}
+
+.tweet-p1{
+  grid-column-start: 2;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  font-size: 13.5px;
+  color: #343535;
+  margin-top: -1px;
+  line-height: 1.5;
+}
+
+.tweet-2{
+  border-bottom: 1px solid #E6ECF0;
+}
+/* GRID FOR TWEET 2 */
+.Inside-tweet-2{
+  display: grid;
+  grid-template-columns:70px 60px 65px 50px 1fr;
+  grid-template-rows:20px 20px 20px;
+  padding-top: 10px;
+}
+
+.pen-tweet-2{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.feed-tweet-name-2{
+  grid-column-start:2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: -1px;
+}
+
+.feed-tag-name-2{
+  grid-column-start:3;
+  grid-row-start: 1;
+  color:grey;
+  font-size: 13.5px;
+  margin-top: -1px;
+}
+.feed-date-2{
+  grid-column-start:4;
+  grid-row-start: 1;
+  color:grey;
+  font-size: 13.5px;
+  margin-top: -1px;
+}
+
+.tweet-p2{
+  grid-column-start: 2;
+  grid-column-end:7;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  font-size: 13.5px;
+  color: #343535;
+  margin-top: -1px;
+  line-height: 1.5;
+}
+
+.tweet-3{
+  border-bottom: 1px solid #E6ECF0;
+}
+/* GRID FOR TWEET 3 */
+.Inside-tweet-3{
+  display: grid;
+  grid-template-columns:70px 60px 65px 50px 1fr;
+  grid-template-rows: 20px 20px 20px;
+  padding-top: 10px;
+}
+.pen-tweet-3{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.feed-tweet-name-3{
+  grid-column-start:2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: -1px;
+
+}
+.feed-tag-name-3{
+  grid-column-start:3;
+  grid-row-start: 1;
+  color:grey;
+  font-size: 13.5px;
+  margin-top: -1px;
+}
+.feed-date-3{
+  grid-column-start:4;
+  grid-row-start: 1;
+  color:grey;
+  font-size: 13.5px;
+  margin-top: -1px;
+}
+
+.tweet-p3{
+  grid-column-start: 2;
+  grid-column-end:7;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  font-size: 13.5px;
+  color: #343535;
+  margin-top: -1px;
+  line-height: 1.5;
+}
+.tweet-4{
+  border-bottom: 1px solid #E6ECF0;
+}
+/* GRID FOR TWEET 4 */
+.Inside-tweet-4{
+  display: grid;
+  grid-template-columns:70px 60px 65px 50px 1fr;
+  grid-template-rows: 20px 20px 20px;
+  padding-top: 10px;
+}
+.feed-tweet-name-4{
+  grid-column-start:2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: -1px;
+
+}
+.feed-tag-name-4{
+  grid-column-start:3;
+  grid-row-start: 1;
+  color:grey;
+  font-size: 13.5px;
+  margin-top: -1px;
+}
+.feed-date-4{
+  grid-column-start:4;
+  grid-row-start: 1;
+  color:grey;
+  font-size: 13.5px;
+  margin-top: -1px;
+}
+.tweet-p4{
+  grid-column-start: 2;
+  grid-column-end:7;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  font-size: 13.5px;
+  color: #343535;
+  margin-top: -1px;
+  line-height: 1.5;
+}
+.pen-tweet-4{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+/* GRID FOR TWEET 5 */
+.Inside-tweet-5{
+  display: grid;
+  grid-template-columns:70px 60px 65px 50px 1fr;
+  grid-template-rows:  20px 20px 20px;
+  padding-top: 10px;
+}
+.feed-tweet-name-5{
+  grid-column-start:2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: -1px;
+
+}
+.feed-tag-name-5{
+  grid-column-start:3;
+  grid-row-start: 1;
+  color:grey;
+  font-size: 13.5px;
+  margin-top: -1px;
+}
+.feed-date-5{
+  grid-column-start:4;
+  grid-row-start: 1;
+  color:grey;
+  font-size: 13.5px;
+  margin-top: -1px;
+}
+.tweet-p5{
+  grid-column-start: 2;
+  grid-column-end:7;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  font-size: 13.5px;
+  color: #343535;
+  margin-top: -1px;
+  line-height: 1.5;
+}
+.pen-tweet-5{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+/* !!!!!!!!!!!!!!!!!!!NEW SECTION!!!!!!!!!!!!!!!!! */
+
+/* RIGHT CONTAINER */
+.content-Right{
+  height: 250px;
+  width:290px;
+  background-color: white;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+}
+.follow-container{
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+}
+.suggested-followers{
+  display: grid;
+  grid-template-columns: 60px 100px 1fr;
+  grid-template-rows: 45px 40px 45px;
+  align-items: left;
+  margin-left: 25px;
+  margin-right: 25px;
+  border-bottom: 1.5px solid #E6ECF0 ;
+}
+.follower1 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+}
+.penguin {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.follower-name1{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  font-weight: 500;
+  font-size: 14px;
+}
+.follower-username1{
+  grid-column-start: 3;
+  color: grey;
+  font-size: 14px;
+}
+.follower-username2{
+  grid-column-start: 3;
+  grid-row-start: 3;
+  color: grey;
+  font-size: 14px;
+}
+.follow-btn1{
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.follow-btn1 button{
+  border: 1px solid #4AB3F4;
+  border-radius: 1em;
+  color:#4AB3F4;
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+}
+.follower-name2{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+}
+.follower-p{
+  font-weight: 500;
+  font-size: 14px;
+}
+.follow-btn2{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+}
+
+.follow-btn2 button{
+  border: 1px solid #4AB3F4;
+  border-radius: 1em;
+  color:#4AB3F4;
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+.border-line1{
+  border-bottom: 1.5px solid #E6ECF0;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+}
+
+.follower2 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+.penguin1 {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  grid-column-start: 1;
+  grid-row-start: 3;
+  padding-top: 10px;
+}
+/* !!!!!!!!!!!!!!!!!!!NEW SECTION!!!!!!!!!!!!!!!!! */
+
+/* RESPONSIVE DEVICES */
+@media screen and (max-width: 1000px) {
+  body {
+    margin-left: 20px;
+}
+.content-Right{
+  display: none;
+}
+ul{
+  margin-left: 1px;
+  padding-left: 0px;
+}
+.twitter-tweet-btn{
+  margin-left: 50px;
+  margin-right: 48px;
+}
+}
+
+/* RESPONSIVE TABLET */
+@media screen and (max-width: 850px) {
+
+  ul{
+    display: none;
+  }
+  
+  .nav-links{
+    background-image: url("images/menu.png");
+    background-size: contain;
+    cursor: pointer;
+    width: 25px;
+    height:25px;
+    margin-left: 5%;
+    margin-top: 10px;
+    color: #4AB3F4;
+  }
+
+  .twitter-tweet-btn{
+    margin-left: 0px;
+  }
+  .content-Wrapper{
+      grid-template-columns: 500px;
+      margin-left: 50px;
+      grid-row-gap: 5px;
+}
+.content-Right{
+  display: none;
+}
+.content-Left{
+  display: none;
+}
+}
+/* RESPONSIVE MOBILE */
+@media screen and (max-width: 550px) {
+body{
+  margin-bottom: 50px;
+}
+
+  .content-Wrapper{
+  grid-template-columns: 1fr;
+  margin-left: 10px;
+}
+.feed-container-grid{
+  grid-template-rows: 70px 100px 80px 80px 80px;
+
+}
+.content-Right{
+  display: none;
+}
+.content-Left{
+  display: none;
+}
+.content-Center{
+  height: 410px;
+  width:450px;
+}
